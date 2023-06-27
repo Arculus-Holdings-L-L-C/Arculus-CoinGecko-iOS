@@ -1,3 +1,27 @@
+// Copyright (c) 2020-2023 Arculus Holdings, L.L.C.  All rights reserved.
+//
+// This software is confidential and proprietary information of
+// Arculus Holdings, L.L.C.  All use and disclosure to third parties is
+// subject to the confidentiality provisions of the license agreement
+// accompanying the software.
+// This copyright notice and disclaimer shall be included with all copies
+// of this software used in derivative works.
+//
+// "Arculus" and the guardian logo are registered trademarks of
+// Arculus Holdings, L.L.C., as are their respective typographic forms
+// presented in this document.
+//
+// THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS OF THIS SOFTWARE BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THIS SOFTWARE OR THE USE, MODIFICATION, DISTRIBUTION, OR OTHER
+// DEALINGS IN THIS SOFTWARE OR ITS DERIVATIVES.
+//
+import Foundation
+
 public struct Arculus_CoinGecko_iOS {
     public private(set) var text = "Hello, World!"
 
@@ -5,7 +29,6 @@ public struct Arculus_CoinGecko_iOS {
     }
 }
 
-import SwiftUI
 
 public enum CoinGecko {
     // swiftlint:disable nesting
@@ -329,7 +352,7 @@ public enum CoinGecko {
     public enum Precision {
         case full
         case decimal(places: UInt)//0-18
-        var value: String {
+        public var value: String {
             switch self {
             case .full: return "full"
             case .decimal(let places): return (places > 18) ? "18" : "\(places)"
@@ -519,17 +542,17 @@ public enum CoinGecko {
             case subredditURL = "subreddit_url"
             case repos = "repos_url"
         }
-        var homepage: [String]?
-        var blockchainSite: [String]?
-        var officialForumUrl: [String]?
-        var chatUrl: [String]?
-        var announcementUrl: [String]?
-        var twitterScreenName: String?
-        var facebookUsername: String?
-        var bitcointalkThreadIdentifier: Int64?
-        var telegramChannelIdentifier: String?
-        var subredditURL: String?
-        var repos: [String: [String]]?
+        public var homepage: [String]?
+        public var blockchainSite: [String]?
+        public var officialForumUrl: [String]?
+        public var chatUrl: [String]?
+        public var announcementUrl: [String]?
+        public var twitterScreenName: String?
+        public var facebookUsername: String?
+        public var bitcointalkThreadIdentifier: Int64?
+        public var telegramChannelIdentifier: String?
+        public var subredditURL: String?
+        public var repos: [String: [String]]?
     }
 
     public struct Coin: Codable, Hashable {
@@ -541,14 +564,14 @@ public enum CoinGecko {
             case image
             case contractAddress = "contract_address"
         }
-        var id: String
-        var symbol: String?
-        var name: String?
-        var assetPlatformId: String?
-        var image: [String: String]?
-        var contractAddress: String?
+        public var id: String
+        public var symbol: String?
+        public var name: String?
+        public var assetPlatformId: String?
+        public var image: [String: String]?
+        public var contractAddress: String?
 
-        var largeImageURL: URL? {
+        public var largeImageURL: URL? {
             return URL(string: image?["large"] ?? "")
         }
 
@@ -568,17 +591,17 @@ public enum CoinGecko {
             case large
         }
 
-        var id: String// "rif-token"
-        var name: String?// "RSK Infrastructure Framework"
-        var apiSymbol: String?// "rif-token"
-        var symbol: String?// "RIF"
-        var marketCapRank: Int64?// 278
-        var thumb: String?// "https://assets.coingecko.com/coins/images/7460/thumb/RIF.png"
-        var large: String?// "https://assets.coingecko.com/coins/images/7460/large/RIF.png"
+        public var id: String// "rif-token"
+        public var name: String?// "RSK Infrastructure Framework"
+        public var apiSymbol: String?// "rif-token"
+        public var symbol: String?// "RIF"
+        public var marketCapRank: Int64?// 278
+        public var thumb: String?// "https://assets.coingecko.com/coins/images/7460/thumb/RIF.png"
+        public var large: String?// "https://assets.coingecko.com/coins/images/7460/large/RIF.png"
     }
 
     public struct SearchResults: Codable {
-        var coins: [SearchResultCoin]
+        public var coins: [SearchResultCoin]
 //        var exchanges: [String]
 //        var icos: [String]
 //        var categories: [String]
@@ -626,59 +649,59 @@ public enum CoinGecko {
             case lastUpdated = "last_updated"
         }
 
-        var id: String
-        var symbol: String
-        var name: String
+        public var id: String
+        public var symbol: String
+        public var name: String
 
-        var assetPlatformId: String
-        var platforms: [String: String]?
+        public var assetPlatformId: String
+        public var platforms: [String: String]?
 
         //! var detailPlatforms: [String: [String: String]]
 
-        var blockTimeInMinutes: Int
-        var hashingAlgorithm: String?
+        public var blockTimeInMinutes: Int
+        public var hashingAlgorithm: String?
 
-        var categories: [String]
+        public var categories: [String]
 
-        var publicNotice: String?
+        public var publicNotice: String?
 
-        var additionalNotices: [String]
+        public var additionalNotices: [String]
 
-        var localization: [String: String]
-        var description: [String: String]
-        var links: ContractLinks?
+        public var localization: [String: String]
+        public var description: [String: String]
+        public var links: ContractLinks?
 
-        var image: [String: String]
+        public var image: [String: String]
 
-        var countryOrigin: String?
-        var genesisDate: String?
+        public var countryOrigin: String?
+        public var genesisDate: String?
 
-        var contractAddress: String
-        var sentimentVotesUpPercentage: Double?
-        var sentimentVotesDownPercentage: Double?
-        var watchlistPortfolioUsers: Double?
-        var marketCapRank: Int?
-        var coingeckoRank: Int?
-        var coingeckoScore: Double?
-        var developerScore: Double?
-        var communityScore: Double?
-        var liquidityScore: Double?
-        var publicInterestScore: Double?
+        public var contractAddress: String
+        public var sentimentVotesUpPercentage: Double?
+        public var sentimentVotesDownPercentage: Double?
+        public var watchlistPortfolioUsers: Double?
+        public var marketCapRank: Int?
+        public var coingeckoRank: Int?
+        public var coingeckoScore: Double?
+        public var developerScore: Double?
+        public var communityScore: Double?
+        public var liquidityScore: Double?
+        public var publicInterestScore: Double?
 
        // var marketData: MarketData
 
-//        var communityData: CommunityData
-//        var developerData: DeveloperData
-//        var publicInterestStats: [String: Int?]
+        //var communityData: CommunityData
+        //var developerData: DeveloperData
+        //var publicInterestStats: [String: Int?]
 
         //var statusUpdates: [String: String]
 
-        var lastUpdated: String
-//        var tickers: [Ticker]
+        public var lastUpdated: String
+        //var tickers: [Ticker]
 
-        var largeImageURL: URL? { URL(string: image["large"] ?? "") }
-        var smallImageURL: URL? { URL(string: image["small"] ?? "") }
-        var thumbImageURL: URL? { URL(string: image["thumb"] ?? "") }
+        public var largeImageURL: URL? { URL(string: image["large"] ?? "") }
+        public var smallImageURL: URL? { URL(string: image["small"] ?? "") }
+        public var thumbImageURL: URL? { URL(string: image["thumb"] ?? "") }
     }
     // swiftlint:enable nesting
     public enum Errors: Error {
