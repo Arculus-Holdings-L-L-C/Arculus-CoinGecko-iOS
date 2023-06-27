@@ -287,9 +287,15 @@ public enum CoinGecko {
         }
     }
     
-    static var currenciesPriceHost = "?"
-    static var currenciesPriceAPIKey = "?"
-    
+    static var currenciesPriceHost = ""
+    static var currenciesPriceAPIKey = ""
+    static func setCurrenciesPriceHost( string: String) {
+        CoinGecko.currenciesPriceHost = string
+    }
+    static func currenciesPriceAPIKey( string: String) {
+        CoinGecko.currenciesPriceAPIKey = string
+    }
+
     var request: URLRequest? {
         //let freeAPI = "\(Constants.currenciesPriceHostFree)\(path)"
         let proAPI = "\(CoinGecko.currenciesPriceHost)\(path)"
@@ -303,7 +309,7 @@ public enum CoinGecko {
         return request
     }
 
-    func getData() async throws -> Data? {
+    public func getData() async throws -> Data? {
         guard let request = self.request else {
             throw CoinGecko.Errors.unknown(message: "Failed to get coingecko data \(self).")
         }
@@ -316,7 +322,7 @@ public enum CoinGecko {
         }
     }
 
-    func getJSON() async throws -> String? {
+    public func getJSON() async throws -> String? {
         do {
             if let data = try await getData() {
                 return String(data: data, encoding: .utf8)
@@ -327,7 +333,7 @@ public enum CoinGecko {
         return nil
     }
 
-    func getObject<T: Decodable>() async throws -> T {
+    public func getObject<T: Decodable>() async throws -> T {
         do {
             if let data = try await getData() {
                 return try JSONDecoder().decode(T.self, from: data)
