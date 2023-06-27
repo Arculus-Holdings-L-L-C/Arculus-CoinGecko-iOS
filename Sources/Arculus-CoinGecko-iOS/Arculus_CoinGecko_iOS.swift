@@ -7,7 +7,7 @@ public struct Arculus_CoinGecko_iOS {
 
 import SwiftUI
 
-enum CoinGecko {
+public enum CoinGecko {
     // swiftlint:disable nesting
     // Follows the specification here:
     // https://www.coingecko.com/en/api/documentation
@@ -326,7 +326,7 @@ enum CoinGecko {
         }()
     }
 
-    enum Precision {
+    public enum Precision {
         case full
         case decimal(places: UInt)//0-18
         var value: String {
@@ -337,7 +337,7 @@ enum CoinGecko {
         }
     }
 
-    enum Order: String {
+    public enum Order: String {
         case marketCapAsc = "market_cap_asc"
         case marketCapDesc = "market_cap_desc"
         case volumeAsc = "volume_asc"
@@ -346,13 +346,13 @@ enum CoinGecko {
         case idDesc = "id_desc"
     }
 
-    enum TickerOrder: String {
+    public enum TickerOrder: String {
         case trustScoreDesc = "trust_score_desc" //(default),
         case trustScoreAsc = "trust_score_asc"
         case volumeDesc = "volume_desc"
     }
 
-    enum PriceChange: String {
+    public enum PriceChange: String {
         case hourly = "1h"
         case daily = "24h"
         case weekly = "7d"
@@ -362,7 +362,7 @@ enum CoinGecko {
         case annually = "1y"
     }
 
-    enum Locale: String, Codable {
+    public enum Locale: String, Codable {
         enum CodingKeys: String, CodingKey {
             case zhtw = "zh-tw"
             case ar, bg, cs, da, de, el, en, es, fi, fr, he, hi,
@@ -405,7 +405,7 @@ enum CoinGecko {
         case zhtw = "zh-tw"
     }
 
-    struct MarketData: Codable, Equatable {
+    public struct MarketData: Codable, Equatable {
         enum CodingKeys: String, CodingKey {
             case currentPrice = "current_price"
         }
@@ -413,7 +413,7 @@ enum CoinGecko {
         var currentPrice: [String: Double]
     }
 
-    struct CommunityData: Codable {
+    public struct CommunityData: Codable {
         enum CodingKeys: String, CodingKey {
             case facebookLikes = "facebook_likes"
             case twitterFollowers = "twitter_followers"
@@ -433,7 +433,7 @@ enum CoinGecko {
         var telegramChannelUserCount: Int?
     }
 
-    struct DeveloperData: Codable {
+    public struct DeveloperData: Codable {
         enum CodingKeys: String, CodingKey {
             case forks
             case stars
@@ -460,7 +460,7 @@ enum CoinGecko {
         //var last4WeeksCommitActivitySeries = []
     }
 
-    struct Ticker: Codable {
+    public struct Ticker: Codable {
 
         enum CodingKeys: String, CodingKey {
             case base
@@ -505,7 +505,7 @@ enum CoinGecko {
         var targetCoinId: String?
     }
 
-    struct ContractLinks: Codable {
+    public struct ContractLinks: Codable {
         enum CodingKeys: String, CodingKey {
             case homepage = "homepage"
             case blockchainSite = "blockchain_site"
@@ -532,7 +532,7 @@ enum CoinGecko {
         var repos: [String: [String]]?
     }
 
-    struct Coin: Codable, Hashable {
+    public struct Coin: Codable, Hashable {
         enum CodingKeys: String, CodingKey {
             case id
             case symbol
@@ -557,7 +557,7 @@ enum CoinGecko {
         }
     }
 
-    struct SearchResultCoin: Codable {
+    public struct SearchResultCoin: Codable {
         enum CodingKeys: String, CodingKey {
             case id
             case name
@@ -577,7 +577,7 @@ enum CoinGecko {
         var large: String?// "https://assets.coingecko.com/coins/images/7460/large/RIF.png"
     }
 
-    struct SearchResults: Codable {
+    public struct SearchResults: Codable {
         var coins: [SearchResultCoin]
 //        var exchanges: [String]
 //        var icos: [String]
@@ -585,8 +585,8 @@ enum CoinGecko {
 //        var nfts: [String]
     }
 
-    struct ContractInfo: Codable, Equatable {
-        static func == (lhs: CoinGecko.ContractInfo, rhs: CoinGecko.ContractInfo) -> Bool {
+    public struct ContractInfo: Codable, Equatable {
+        public static func == (lhs: CoinGecko.ContractInfo, rhs: CoinGecko.ContractInfo) -> Bool {
             lhs.id == rhs.id
         }
 
@@ -681,7 +681,7 @@ enum CoinGecko {
         var thumbImageURL: URL? { URL(string: image["thumb"] ?? "") }
     }
     // swiftlint:enable nesting
-    enum Errors: Error {
+    public enum Errors: Error {
         case unknown(message: String)
     }
 
