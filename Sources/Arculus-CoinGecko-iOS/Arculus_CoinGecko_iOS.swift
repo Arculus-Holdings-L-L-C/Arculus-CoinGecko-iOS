@@ -289,11 +289,9 @@ public enum CoinGecko {
     
     static var currenciesPriceHost = ""
     static var currenciesPriceAPIKey = ""
-    static func setCurrenciesPriceHost( string: String) {
-        CoinGecko.currenciesPriceHost = string
-    }
-    static func currenciesPriceAPIKey( string: String) {
-        CoinGecko.currenciesPriceAPIKey = string
+    public static func setAPI(priceHost: String, key: String) {
+        CoinGecko.currenciesPriceHost = priceHost
+        CoinGecko.currenciesPriceAPIKey = key
     }
 
     var request: URLRequest? {
