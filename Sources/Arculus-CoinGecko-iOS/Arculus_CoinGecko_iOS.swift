@@ -612,6 +612,15 @@ public enum CoinGecko {
 //        var nfts: [String]
     }
 
+    public struct ContractInfoDetails: Codable {
+        enum CodingKeys: String, CodingKey {
+            case decimalPlace = "decimal_place"
+            case contractAddress = "contract_adddress"
+        }
+        var decimalPlace: Int
+        var contractAddress: String
+    }
+    
     public struct ContractInfo: Codable, Equatable {
         public static func == (lhs: CoinGecko.ContractInfo, rhs: CoinGecko.ContractInfo) -> Bool {
             lhs.id == rhs.id
@@ -628,7 +637,7 @@ public enum CoinGecko {
                  description,
                  links
             case assetPlatformId = "asset_platform_id"
-            //! case detailPlatforms = "detail_platforms"
+            case detailPlatforms = "detail_platforms"
             case blockTimeInMinutes = "block_time_in_minutes"
             case hashingAlgorithm = "hashing_algorithm"
             case publicNotice = "public_notice"
@@ -660,7 +669,7 @@ public enum CoinGecko {
         public var assetPlatformId: String
         public var platforms: [String: String]?
 
-        //! var detailPlatforms: [String: [String: String]]
+        public var detailPlatforms: [String: [String: ContractInfoDetails]]?
 
         public var blockTimeInMinutes: Int
         public var hashingAlgorithm: String?
