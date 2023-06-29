@@ -669,7 +669,7 @@ public enum CoinGecko {
         public var assetPlatformId: String
         public var platforms: [String: String]?
 
-        public var detailPlatforms: [String: [String: ContractInfoDetails]]?
+        public var detailPlatforms: [String: ContractInfoDetails]?
 
         public var blockTimeInMinutes: Int
         public var hashingAlgorithm: String?
