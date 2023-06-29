@@ -615,10 +615,10 @@ public enum CoinGecko {
     public struct ContractInfoDetails: Codable {
         enum CodingKeys: String, CodingKey {
             case decimalPlace = "decimal_place"
-            case contractAddress = "contract_adddress"
+            case contractAddress = "contract_address"
         }
-        var decimalPlace: Int
-        var contractAddress: String
+        var decimalPlace: Int?
+        var contractAddress: String?
     }
     
     public struct ContractInfo: Codable, Equatable {
