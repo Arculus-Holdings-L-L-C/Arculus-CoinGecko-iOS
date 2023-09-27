@@ -723,6 +723,93 @@ public enum CoinGecko {
 
 }
 
+public struct CoinPlatformDetails: Codable, Hashable {
+    enum CodingKeys: String, CodingKey {
+        case decimals = "decimal_place"
+        case contractAddress = "contract_address"
+    }
+
+    var decimals: Int?
+    var contractAddress: String?
+}
+
+public struct CoinDetails: Codable, Hashable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case symbol
+        case name
+        case assetPlatformId = "asset_platform_id"
+        case image
+        case contractAddress = "contract_address"
+        case detailPlatforms = "detail_platforms"
+    }
+    public var id: String
+    public var symbol: String?
+    public var name: String?
+    public var assetPlatformId: String?
+    public var image: [String: String]?
+    public var contractAddress: String?
+    public var detailPlatforms: [String: CoinPlatformDetails]?
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+
+    public var largeImageURL: URL? {
+        return URL(string: image?["large"] ?? "")
+    }
+}
+
+extension CoinDetails {
+
+    public func displayContractAddress(network: String) -> String {
+        detailPlatforms?[network]?.contractAddress ?? contractAddress ?? "No Address"
+    }
+
+    var networks: [CardBlockchain] {
+        detailPlatforms?.keys.compactMap({
+            CardBlockchain.createFrom(coingeckoID: $0)
+        }) ?? []
+    }
+
+    func tokenJSON(network: CardBlockchain) -> String? {
+        guard let symbol = symbol else { return nil }
+        guard let name = name else { return nil }
+
+        guard let contract = (detailPlatforms?[network.coingeckoID]?.contractAddress ??
+                              contractAddress) else { return nil }
+        guard let decimals = detailPlatforms?[network.coingeckoID]?.decimals else { return nil }
+
+        let type = network.tokenType
+        return """
+        {
+            "identifier":"\(id)",
+            "code": "\(symbol)",
+            "name": "\(name)",
+            "scale":\(decimals),
+            "contract_address": "\(contract)",
+            "type": "\(type)",
+            "alternate_names": {
+                "coingecko": "\(id)"
+            },
+            "icon":"\(largeImageURL?.absoluteString ?? "")",
+            "network":"\(network.networkName)-mainnet"
+        }
+        """
+    }
+
+    func tokenInfo(network: CardBlockchain) -> TokenInfo? {
+        guard let json = tokenJSON(network: network) else {
+            log("Error creating JSON for token \(self.symbol ?? "?") \(self.name ?? "?")")
+            return nil
+        }
+
+        guard let data = json.data(using: .utf8) else { return nil }
+        return try? JSONDecoder().decode(TokenInfo.self, from: data)
+    }
+
+}
+
 // Extension for printing the example results
 extension CoinGecko {
     func testJSON() async {
