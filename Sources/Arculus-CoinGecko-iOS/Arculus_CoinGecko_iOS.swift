@@ -611,6 +611,43 @@ public enum CoinGecko {
 //        var categories: [String]
 //        var nfts: [String]
     }
+    
+    public struct CoinPlatformDetails: Codable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case decimals = "decimal_place"
+            case contractAddress = "contract_address"
+        }
+
+        var decimals: Int?
+        var contractAddress: String?
+    }
+
+    public struct CoinDetails: Codable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case id
+            case symbol
+            case name
+            case assetPlatformId = "asset_platform_id"
+            case image
+            case contractAddress = "contract_address"
+            case detailPlatforms = "detail_platforms"
+        }
+        public var id: String
+        public var symbol: String?
+        public var name: String?
+        public var assetPlatformId: String?
+        public var image: [String: String]?
+        public var contractAddress: String?
+        public var detailPlatforms: [String: CoinPlatformDetails]?
+
+        public func hash(into hasher: inout Hasher) {
+            hasher.combine(self.id)
+        }
+
+        public var largeImageURL: URL? {
+            return URL(string: image?["large"] ?? "")
+        }
+    }
 
     public struct ContractInfoDetails: Codable {
         enum CodingKeys: String, CodingKey {
@@ -723,42 +760,6 @@ public enum CoinGecko {
 
 }
 
-public struct CoinPlatformDetails: Codable, Hashable {
-    enum CodingKeys: String, CodingKey {
-        case decimals = "decimal_place"
-        case contractAddress = "contract_address"
-    }
-
-    var decimals: Int?
-    var contractAddress: String?
-}
-
-public struct CoinDetails: Codable, Hashable {
-    enum CodingKeys: String, CodingKey {
-        case id
-        case symbol
-        case name
-        case assetPlatformId = "asset_platform_id"
-        case image
-        case contractAddress = "contract_address"
-        case detailPlatforms = "detail_platforms"
-    }
-    public var id: String
-    public var symbol: String?
-    public var name: String?
-    public var assetPlatformId: String?
-    public var image: [String: String]?
-    public var contractAddress: String?
-    public var detailPlatforms: [String: CoinPlatformDetails]?
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(self.id)
-    }
-
-    public var largeImageURL: URL? {
-        return URL(string: image?["large"] ?? "")
-    }
-}
 
 
 // Extension for printing the example results
