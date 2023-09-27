@@ -760,55 +760,6 @@ public struct CoinDetails: Codable, Hashable {
     }
 }
 
-extension CoinDetails {
-
-    public func displayContractAddress(network: String) -> String {
-        detailPlatforms?[network]?.contractAddress ?? contractAddress ?? "No Address"
-    }
-
-    var networks: [CardBlockchain] {
-        detailPlatforms?.keys.compactMap({
-            CardBlockchain.createFrom(coingeckoID: $0)
-        }) ?? []
-    }
-
-    func tokenJSON(network: CardBlockchain) -> String? {
-        guard let symbol = symbol else { return nil }
-        guard let name = name else { return nil }
-
-        guard let contract = (detailPlatforms?[network.coingeckoID]?.contractAddress ??
-                              contractAddress) else { return nil }
-        guard let decimals = detailPlatforms?[network.coingeckoID]?.decimals else { return nil }
-
-        let type = network.tokenType
-        return """
-        {
-            "identifier":"\(id)",
-            "code": "\(symbol)",
-            "name": "\(name)",
-            "scale":\(decimals),
-            "contract_address": "\(contract)",
-            "type": "\(type)",
-            "alternate_names": {
-                "coingecko": "\(id)"
-            },
-            "icon":"\(largeImageURL?.absoluteString ?? "")",
-            "network":"\(network.networkName)-mainnet"
-        }
-        """
-    }
-
-    func tokenInfo(network: CardBlockchain) -> TokenInfo? {
-        guard let json = tokenJSON(network: network) else {
-            log("Error creating JSON for token \(self.symbol ?? "?") \(self.name ?? "?")")
-            return nil
-        }
-
-        guard let data = json.data(using: .utf8) else { return nil }
-        return try? JSONDecoder().decode(TokenInfo.self, from: data)
-    }
-
-}
 
 // Extension for printing the example results
 extension CoinGecko {
