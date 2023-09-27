@@ -618,8 +618,8 @@ public enum CoinGecko {
             case contractAddress = "contract_address"
         }
 
-        var decimals: Int?
-        var contractAddress: String?
+        public var decimals: Int?
+        public var contractAddress: String?
     }
 
     public struct CoinDetails: Codable, Hashable {
