@@ -432,13 +432,7 @@ public enum CoinGecko {
         case zhtw = "zh-tw"
     }
 
-    public struct MarketData: Codable, Equatable {
-        enum CodingKeys: String, CodingKey {
-            case currentPrice = "current_price"
-        }
-
-        var currentPrice: [String: Double]
-    }
+   
 
     public struct CommunityData: Codable {
         enum CodingKeys: String, CodingKey {

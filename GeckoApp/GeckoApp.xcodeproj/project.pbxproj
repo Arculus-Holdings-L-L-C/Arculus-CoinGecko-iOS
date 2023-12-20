@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3109069B2B3330260008E473 /* GeckoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109069A2B3330260008E473 /* GeckoAppApp.swift */; };
+		3109069D2B3330260008E473 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109069C2B3330260008E473 /* ContentView.swift */; };
+		3109069F2B33302E0008E473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3109069E2B33302E0008E473 /* Assets.xcassets */; };
+		310906A22B33302E0008E473 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310906A12B33302E0008E473 /* Preview Assets.xcassets */; };
+		310906AC2B33302E0008E473 /* GeckoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310906AB2B33302E0008E473 /* GeckoAppTests.swift */; };
+		310906B62B33302E0008E473 /* GeckoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310906B52B33302E0008E473 /* GeckoAppUITests.swift */; };
+		310906B82B33302E0008E473 /* GeckoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310906B72B33302E0008E473 /* GeckoAppUITestsLaunchTests.swift */; };
+		310906C62B3330DC0008E473 /* Arculus-CoinGecko-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 310906C52B3330DC0008E473 /* Arculus-CoinGecko-iOS */; };
+		310906C82B3339A00008E473 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310906C72B3339A00008E473 /* Model.swift */; };
+		310906CA2B3346150008E473 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310906C92B3346150008E473 /* constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		310906A82B33302E0008E473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3109068F2B3330260008E473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 310906962B3330260008E473;
+			remoteInfo = GeckoApp;
+		};
+		310906B22B33302E0008E473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3109068F2B3330260008E473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 310906962B3330260008E473;
+			remoteInfo = GeckoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		310906972B3330260008E473 /* GeckoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeckoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3109069A2B3330260008E473 /* GeckoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoAppApp.swift; sourceTree = "<group>"; };
+		3109069C2B3330260008E473 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3109069E2B33302E0008E473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		310906A12B33302E0008E473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		310906A72B33302E0008E473 /* GeckoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeckoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		310906AB2B33302E0008E473 /* GeckoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoAppTests.swift; sourceTree = "<group>"; };
+		310906B12B33302E0008E473 /* GeckoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeckoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		310906B52B33302E0008E473 /* GeckoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoAppUITests.swift; sourceTree = "<group>"; };
+		310906B72B33302E0008E473 /* GeckoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		310906C72B3339A00008E473 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		310906C92B3346150008E473 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		310906942B3330260008E473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310906C62B3330DC0008E473 /* Arculus-CoinGecko-iOS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		310906A42B33302E0008E473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		310906AE2B33302E0008E473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3109068E2B3330260008E473 = {
+			isa = PBXGroup;
+			children = (
+				310906992B3330260008E473 /* GeckoApp */,
+				310906AA2B33302E0008E473 /* GeckoAppTests */,
+				310906B42B33302E0008E473 /* GeckoAppUITests */,
+				310906982B3330260008E473 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		310906982B3330260008E473 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				310906972B3330260008E473 /* GeckoApp.app */,
+				310906A72B33302E0008E473 /* GeckoAppTests.xctest */,
+				310906B12B33302E0008E473 /* GeckoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		310906992B3330260008E473 /* GeckoApp */ = {
+			isa = PBXGroup;
+			children = (
+				310906C92B3346150008E473 /* constants.swift */,
+				3109069A2B3330260008E473 /* GeckoAppApp.swift */,
+				3109069C2B3330260008E473 /* ContentView.swift */,
+				310906C72B3339A00008E473 /* Model.swift */,
+				3109069E2B33302E0008E473 /* Assets.xcassets */,
+				310906A02B33302E0008E473 /* Preview Content */,
+			);
+			path = GeckoApp;
+			sourceTree = "<group>";
+		};
+		310906A02B33302E0008E473 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				310906A12B33302E0008E473 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		310906AA2B33302E0008E473 /* GeckoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				310906AB2B33302E0008E473 /* GeckoAppTests.swift */,
+			);
+			path = GeckoAppTests;
+			sourceTree = "<group>";
+		};
+		310906B42B33302E0008E473 /* GeckoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				310906B52B33302E0008E473 /* GeckoAppUITests.swift */,
+				310906B72B33302E0008E473 /* GeckoAppUITestsLaunchTests.swift */,
+			);
+			path = GeckoAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		310906962B3330260008E473 /* GeckoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 310906BB2B33302E0008E473 /* Build configuration list for PBXNativeTarget "GeckoApp" */;
+			buildPhases = (
+				310906932B3330260008E473 /* Sources */,
+				310906942B3330260008E473 /* Frameworks */,
+				310906952B3330260008E473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeckoApp;
+			packageProductDependencies = (
+				310906C52B3330DC0008E473 /* Arculus-CoinGecko-iOS */,
+			);
+			productName = GeckoApp;
+			productReference = 310906972B3330260008E473 /* GeckoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		310906A62B33302E0008E473 /* GeckoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 310906BE2B33302E0008E473 /* Build configuration list for PBXNativeTarget "GeckoAppTests" */;
+			buildPhases = (
+				310906A32B33302E0008E473 /* Sources */,
+				310906A42B33302E0008E473 /* Frameworks */,
+				310906A52B33302E0008E473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				310906A92B33302E0008E473 /* PBXTargetDependency */,
+			);
+			name = GeckoAppTests;
+			productName = GeckoAppTests;
+			productReference = 310906A72B33302E0008E473 /* GeckoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		310906B02B33302E0008E473 /* GeckoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 310906C12B33302E0008E473 /* Build configuration list for PBXNativeTarget "GeckoAppUITests" */;
+			buildPhases = (
+				310906AD2B33302E0008E473 /* Sources */,
+				310906AE2B33302E0008E473 /* Frameworks */,
+				310906AF2B33302E0008E473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				310906B32B33302E0008E473 /* PBXTargetDependency */,
+			);
+			name = GeckoAppUITests;
+			productName = GeckoAppUITests;
+			productReference = 310906B12B33302E0008E473 /* GeckoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3109068F2B3330260008E473 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					310906962B3330260008E473 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					310906A62B33302E0008E473 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 310906962B3330260008E473;
+					};
+					310906B02B33302E0008E473 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 310906962B3330260008E473;
+					};
+				};
+			};
+			buildConfigurationList = 310906922B3330260008E473 /* Build configuration list for PBXProject "GeckoApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3109068E2B3330260008E473;
+			packageReferences = (
+				310906C42B3330DC0008E473 /* XCLocalSwiftPackageReference ".." */,
+			);
+			productRefGroup = 310906982B3330260008E473 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				310906962B3330260008E473 /* GeckoApp */,
+				310906A62B33302E0008E473 /* GeckoAppTests */,
+				310906B02B33302E0008E473 /* GeckoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		310906952B3330260008E473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310906A22B33302E0008E473 /* Preview Assets.xcassets in Resources */,
+				3109069F2B33302E0008E473 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		310906A52B33302E0008E473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		310906AF2B33302E0008E473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		310906932B3330260008E473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310906C82B3339A00008E473 /* Model.swift in Sources */,
+				3109069D2B3330260008E473 /* ContentView.swift in Sources */,
+				3109069B2B3330260008E473 /* GeckoAppApp.swift in Sources */,
+				310906CA2B3346150008E473 /* constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		310906A32B33302E0008E473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310906AC2B33302E0008E473 /* GeckoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		310906AD2B33302E0008E473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310906B82B33302E0008E473 /* GeckoAppUITestsLaunchTests.swift in Sources */,
+				310906B62B33302E0008E473 /* GeckoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		310906A92B33302E0008E473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 310906962B3330260008E473 /* GeckoApp */;
+			targetProxy = 310906A82B33302E0008E473 /* PBXContainerItemProxy */;
+		};
+		310906B32B33302E0008E473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 310906962B3330260008E473 /* GeckoApp */;
+			targetProxy = 310906B22B33302E0008E473 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		310906B92B33302E0008E473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		310906BA2B33302E0008E473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		310906BC2B33302E0008E473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GeckoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = L45VVMQCG8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.arculus.GeckoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		310906BD2B33302E0008E473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GeckoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = L45VVMQCG8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.arculus.GeckoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		310906BF2B33302E0008E473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L45VVMQCG8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.arculus.GeckoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeckoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeckoApp";
+			};
+			name = Debug;
+		};
+		310906C02B33302E0008E473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L45VVMQCG8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.arculus.GeckoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeckoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeckoApp";
+			};
+			name = Release;
+		};
+		310906C22B33302E0008E473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L45VVMQCG8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.arculus.GeckoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeckoApp;
+			};
+			name = Debug;
+		};
+		310906C32B33302E0008E473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L45VVMQCG8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.arculus.GeckoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeckoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		310906922B3330260008E473 /* Build configuration list for PBXProject "GeckoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310906B92B33302E0008E473 /* Debug */,
+				310906BA2B33302E0008E473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		310906BB2B33302E0008E473 /* Build configuration list for PBXNativeTarget "GeckoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310906BC2B33302E0008E473 /* Debug */,
+				310906BD2B33302E0008E473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		310906BE2B33302E0008E473 /* Build configuration list for PBXNativeTarget "GeckoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310906BF2B33302E0008E473 /* Debug */,
+				310906C02B33302E0008E473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		310906C12B33302E0008E473 /* Build configuration list for PBXNativeTarget "GeckoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310906C22B33302E0008E473 /* Debug */,
+				310906C32B33302E0008E473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		310906C42B3330DC0008E473 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		310906C52B3330DC0008E473 /* Arculus-CoinGecko-iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "Arculus-CoinGecko-iOS";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3109068F2B3330260008E473 /* Project object */;
+}
