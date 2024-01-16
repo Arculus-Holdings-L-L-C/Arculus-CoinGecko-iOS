@@ -288,10 +288,12 @@ public enum CoinGecko {
     }
     
     static var currenciesPriceHost = ""
-    static var currenciesPriceAPIKey = ""
-    public static func setAPI(priceHost: String, key: String) {
+    static var currenciesPriceAPIKey: String?
+    static var cloudAPIKey: String?
+    public static func setAPI(priceHost: String, key: String?, cloudKey: String? = nil) {
         CoinGecko.currenciesPriceHost = priceHost
         CoinGecko.currenciesPriceAPIKey = key
+        CoinGecko.cloudAPIKey = cloudKey
     }
 
     var request: URLRequest? {
@@ -302,7 +304,8 @@ public enum CoinGecko {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         var headers = [String: String]()
-        headers["X-Cg-Pro-Api-Key"] = CoinGecko.currenciesPriceAPIKey
+        if let key = CoinGecko.currenciesPriceAPIKey { headers["X-Cg-Pro-Api-Key"] = key }
+        if let key = CoinGecko.cloudAPIKey { headers["X-API-KEY"] = key }
         request.allHTTPHeaderFields = headers
         return request
     }
