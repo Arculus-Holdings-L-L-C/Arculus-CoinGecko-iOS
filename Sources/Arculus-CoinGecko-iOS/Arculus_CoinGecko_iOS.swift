@@ -288,10 +288,12 @@ public enum CoinGecko {
     }
     
     static var currenciesPriceHost = ""
-    static var currenciesPriceAPIKey = ""
-    public static func setAPI(priceHost: String, key: String) {
+    static var currenciesPriceAPIKey: String?
+    static var cloudAPIKey: String?
+    public static func setAPI(priceHost: String, key: String?, cloudKey: String? = nil) {
         CoinGecko.currenciesPriceHost = priceHost
         CoinGecko.currenciesPriceAPIKey = key
+        CoinGecko.cloudAPIKey = cloudKey
     }
 
     var request: URLRequest? {
@@ -302,7 +304,10 @@ public enum CoinGecko {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         var headers = [String: String]()
-        headers["X-Cg-Pro-Api-Key"] = CoinGecko.currenciesPriceAPIKey
+        if let key = CoinGecko.currenciesPriceAPIKey { headers["X-Cg-Pro-Api-Key"] = key }
+        if let key = CoinGecko.cloudAPIKey { headers["X-API-KEY"] = key }
+	headers["Content-Type"] = "application/json"
+
         request.allHTTPHeaderFields = headers
         return request
     }
@@ -337,7 +342,6 @@ public enum CoinGecko {
                 return try JSONDecoder().decode(T.self, from: data)
             }
         } catch {
-            print("error!!")
             throw CoinGecko.Errors.unknown(message: "Failed to get coingecko data \(self).")
         }
         throw CoinGecko.Errors.unknown(message: "Failed to get coingecko data \(self).")
@@ -346,7 +350,7 @@ public enum CoinGecko {
     class CoinGeckoSession {
         static var shared: CoinGeckoSession = CoinGeckoSession()
         lazy var configuration: URLSessionConfiguration = {
-            return URLSessionConfiguration.default
+            return URLSessionConfiguration.ephemeral
         }()
         lazy var urlSession: URLSession  = {
             return URLSession(configuration: configuration)
