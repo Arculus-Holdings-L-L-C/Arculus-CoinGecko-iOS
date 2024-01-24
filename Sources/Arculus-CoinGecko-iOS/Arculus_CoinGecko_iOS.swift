@@ -306,6 +306,8 @@ public enum CoinGecko {
         var headers = [String: String]()
         if let key = CoinGecko.currenciesPriceAPIKey { headers["X-Cg-Pro-Api-Key"] = key }
         if let key = CoinGecko.cloudAPIKey { headers["X-API-KEY"] = key }
+	headers["Content-Type"] = "application/json"
+
         request.allHTTPHeaderFields = headers
         return request
     }
@@ -348,7 +350,7 @@ public enum CoinGecko {
     class CoinGeckoSession {
         static var shared: CoinGeckoSession = CoinGeckoSession()
         lazy var configuration: URLSessionConfiguration = {
-            return URLSessionConfiguration.default
+            return URLSessionConfiguration.ephemeral
         }()
         lazy var urlSession: URLSession  = {
             return URLSession(configuration: configuration)
