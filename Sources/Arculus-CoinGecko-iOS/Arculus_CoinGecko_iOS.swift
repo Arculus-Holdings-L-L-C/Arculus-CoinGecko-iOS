@@ -339,8 +339,7 @@ public enum CoinGecko {
             if let data = try await getData() {
                 return try JSONDecoder().decode(T.self, from: data)
             }
-        } catch let error {
-            print("getObject Error: \(error)")
+        } catch {
             throw CoinGecko.Errors.unknown(message: "Failed to get coingecko data \(self).")
         }
         throw CoinGecko.Errors.unknown(message: "Failed to get coingecko data \(self).")
